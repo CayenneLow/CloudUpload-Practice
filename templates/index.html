@@ -5,10 +5,9 @@
 		<title>Index</title>
 	</head>
 	<body>
-            <form method = "POST" action="/upload" enctype="multipart/form-data">
-                <input type="file" name="inputFile">
-                <br>
-                <button type ="submit"> Submit </button>
-            </form>
+            {% for file in files %} 	
+            {{file.filename}}
+            <br>
+            {% endfor %}
 	</body>
 </html>
