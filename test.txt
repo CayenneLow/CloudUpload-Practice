@@ -1,7 +1,0 @@
-test.txt
-
-:Author: khye
-:Email: khye@khye-ean
-:Date: 2018-10-17 15:59
-
-
