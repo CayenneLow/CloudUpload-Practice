@@ -9,5 +9,11 @@
             {{file.id}} {{file.filename}}
             <br>
             {% endfor %}
+
+
+        <form method = "POST" action="/upload" enctype="multipart/form-data">
+        <input type="file" name="inputFile">
+        <br>
+        <button type ="submit"> Submit </button>
 	</body>
 </html>

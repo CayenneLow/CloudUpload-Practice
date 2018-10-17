@@ -16,4 +16,4 @@ def upload():
     db.session.add(newFile)
     db.session.commit()
 
-    return "Nice, uploaded " + file.filename + "."
+    return redirect('index')
