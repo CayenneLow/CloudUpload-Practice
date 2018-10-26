@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-        <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
 		<title>Index</title>
 	</head>
 	<body>
@@ -9,11 +11,11 @@
             {{file.id}} {{file.filename}}
             <br>
             {% endfor %}
-
-
-        <form method = "POST" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="inputFile">
-        <br>
-        <button type ="submit"> Submit </button>
+            <div class="container">
+                <div class="droparea">Drop Here</div>
+            </div>
+        <script src="{{url_for('static',filename='app.js')}}">
+        </script>
 	</body>
 </html>
+
