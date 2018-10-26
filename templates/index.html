@@ -1,21 +1,31 @@
 <!DOCTYPE html>
+{% extends "bootstrap/base.html" %}
 <html>
 	<head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
+            {% block scripts %}
+            {{ super() }}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
-		<title>Index</title>
+            <script src="{{url_for('static',filename='app.js')}}"></script>
+            {% endblock %}
+            <title>Index</title>
 	</head>
 	<body>
+            {% block content %}
+        <div class="row h-100">
+        <div class="my-auto col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3 col-xs-12">
+            <ul class="list-group">
             {% for file in files %} 	
-            {{file.id}} {{file.filename}}
-            <br>
+            <li class="list-group-item">{{file.id}} {{file.filename}}</li>
             {% endfor %}
+            </ul>
+        </div>
             <div class="container">
-                <div class="droparea">Drop Here</div>
+                <div class="droparea">Upload Files Here</div>
             </div>
-        <script src="{{url_for('static',filename='app.js')}}">
-        </script>
+        </div>
+            {% endblock %}
 	</body>
 </html>
 
