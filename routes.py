@@ -24,10 +24,12 @@ def upload():
 
     return redirect(url_for('index'))
 
+# clears database and uploads folder
 @app.route('/clear')
 def clear():
     files = Files.query.order_by(Files.id.desc()).all()
     for file in files:
+        os.remove(os.path.join(app.config['UPLOAD_FOLDER'],file.filename))
         db.session.delete(file)
     db.session.commit()
 
