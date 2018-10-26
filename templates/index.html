@@ -1,12 +1,8 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}"
 <html>
 	<head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
             <link rel="stylesheet" href="{{url_for('static', filename='app.css')}}">
 		<title>Index</title>
 	</head>
@@ -16,7 +12,7 @@
             <br>
             {% endfor %}
             <div class="container">
-            <div class="droparea">Drop Here</div>
+                <div class="droparea">Drop Here</div>
             </div>
         <script src="{{url_for('static',filename='app.js')}}">
         </script>
