@@ -33,9 +33,3 @@ def clear():
 
     return redirect(url_for('index'))
 
-@app.after_request
-def add_header(response):
-    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    response.headers['Cache-Control'] = 'public, max-age=0'
-    print("hi")
-    return response
