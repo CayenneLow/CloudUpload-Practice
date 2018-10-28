@@ -7,9 +7,8 @@ from models import Files
 @app.route('/', methods=['POST', 'GET'])
 @app.route('/index', methods=['POST', 'GET'])
 def index():
+    # passes a dictionary of files retrieved from the database
     files = Files.query.order_by(Files.id.desc()).all()
-    for file in files:
-        print(file.filename)
     return render_template('index.html', files=files)
 
 @app.route('/upload', methods=['POST','GET'])
@@ -24,6 +23,7 @@ def upload():
 
     return redirect(url_for('index'))
 
+# NUKE OPTION
 # clears database and uploads folder
 @app.route('/clear')
 def clear():

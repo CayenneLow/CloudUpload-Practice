@@ -1,5 +1,6 @@
 $(function(){
 
+    // prevent browser's default action (opening file in the tab)
     var dragHandler = function(evt){
         evt.preventDefault();
     };
@@ -22,7 +23,7 @@ $(function(){
                 location.reload(true);
             }
         };
-
+        // run ajax request
         $.ajax(req);
     };
 
