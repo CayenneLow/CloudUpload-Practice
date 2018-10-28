@@ -1,3 +1,5 @@
+// Reference: https://bit.ly/2nJXqzb
+
 $(function(){
 
     // prevent browser's default action (opening file in the tab)
