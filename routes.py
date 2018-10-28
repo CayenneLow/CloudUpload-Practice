@@ -1,7 +1,7 @@
 import os
 from app import app
 from app import app, db
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, send_from_directory
 from models import Files
 
 @app.route('/', methods=['POST', 'GET'])
@@ -35,3 +35,7 @@ def clear():
 
     return redirect(url_for('index'))
 
+# reroutes downloads to download from uploads
+@app.route('/download/<path:name>')
+def download(name):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], name, as_attachment=True)
