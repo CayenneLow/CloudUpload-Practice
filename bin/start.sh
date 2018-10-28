@@ -1,2 +1,2 @@
-pip install -r bin/requirements.txt
+pip install -r requirements.txt
 python3 app.py 
